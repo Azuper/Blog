@@ -1,0 +1,38 @@
+/*
+
+# son selectores de ID
+
+id=txt1
+id=txt2
+. selectores de clases
+elementos
+	ul
+	li
+	body
+	div
+	h1
+	header
+	a
+
+
+*/
+
+h1{
+	color:red;
+}
+nav.principal{
+	background: #4398ce;
+}
+nav.principal ul li{
+	list-style: none;
+	  display: inline-block;
+	  height: 3em;
+}
+nav.principal ul li a {
+	text-decoration: none;
+	color:white;
+
+}
+nav.principal ul li a:hover{
+	background: red;
+}

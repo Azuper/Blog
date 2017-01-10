@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'mycss.css' %}">
+</head>
+<body>
+	
+	<h1>BLog VBF</h1>
+	<nav class="principal">
+		<ul>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+		</ul>
+	</nav>
+
+	<nav class="aside">
+		<ul>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+			<li><a href="">contenido 1</a></li>
+		</ul>
+	</nav>
+<ul>
+	{%for postt in object_list%}
+	<li>{{postt.titulo}} ({{postt.cuerpo}}Pages)
+	<a href="{% url 'blog_vbf:postt_new' %}">New</a>
+	<a href="{% url 'blog_vbf:postt_edit' postt.id %}">Edit</a>
+	<a href="/blog_vbf/edit/{{postt.id}}">Edit</a>
+	<a href="{% url 'blog_vbf:postt_delete' postt.id %}">Delete</a>
+	</li>
+
+	{%endfor%}
+</ul>
+
+</body>
+</html>
